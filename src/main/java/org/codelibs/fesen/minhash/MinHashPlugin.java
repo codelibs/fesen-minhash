@@ -1,14 +1,14 @@
-package org.codelibs.elasticsearch.minhash;
+package org.codelibs.fesen.minhash;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.codelibs.elasticsearch.minhash.index.analysis.MinHashTokenFilterFactory;
-import org.codelibs.elasticsearch.minhash.index.mapper.MinHashFieldMapper;
 import org.codelibs.fesen.index.analysis.TokenFilterFactory;
 import org.codelibs.fesen.index.mapper.Mapper;
 import org.codelibs.fesen.indices.analysis.AnalysisModule.AnalysisProvider;
+import org.codelibs.fesen.minhash.index.analysis.MinHashTokenFilterFactory;
+import org.codelibs.fesen.minhash.index.mapper.MinHashFieldMapper;
 import org.codelibs.fesen.plugins.AnalysisPlugin;
 import org.codelibs.fesen.plugins.MapperPlugin;
 import org.codelibs.fesen.plugins.Plugin;

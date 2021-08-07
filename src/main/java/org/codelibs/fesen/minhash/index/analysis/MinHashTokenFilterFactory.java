@@ -1,4 +1,4 @@
-package org.codelibs.elasticsearch.minhash.index.analysis;
+package org.codelibs.fesen.minhash.index.analysis;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.codelibs.fesen.common.settings.Settings;

@@ -1,4 +1,4 @@
-package org.codelibs.elasticsearch.minhash;
+package org.codelibs.fesen.minhash;
 
 import static org.codelibs.fesen.runner.FesenRunner.newConfigs;
 
@@ -41,7 +41,7 @@ public class MinHashPluginTest extends TestCase {
                 settingsBuilder.put("http.cors.allow-origin", "*");
                 settingsBuilder.put("discovery.type", "single-node");
             }
-        }).build(newConfigs().clusterName(clusterName).numOfNode(1).pluginTypes("org.codelibs.elasticsearch.minhash.MinHashPlugin"));
+        }).build(newConfigs().clusterName(clusterName).numOfNode(1).pluginTypes("org.codelibs.fesen.minhash.MinHashPlugin"));
 
         // wait for yellow status
         runner.ensureYellow();

@@ -1,4 +1,4 @@
-package org.codelibs.elasticsearch.minhash.index.mapper;
+package org.codelibs.fesen.minhash.index.mapper;
 
 import static org.codelibs.fesen.common.xcontent.support.XContentMapValues.isArray;
 import static org.codelibs.fesen.common.xcontent.support.XContentMapValues.nodeStringValue;
