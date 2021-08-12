@@ -1,4 +1,5 @@
-Elasticsearch MinHash Plugin
+Fesen MinHash Plugin
+[![Java CI with Maven](https://github.com/codelibs/fesen-minhash/actions/workflows/maven.yml/badge.svg)](https://github.com/codelibs/fesen-minhash/actions/workflows/maven.yml)
 =======================
 
 ## Overview
@@ -8,15 +9,15 @@ Using a field type and a token filter provided by this plugin, you can add a min
 
 ## Version
 
-[Versions in Maven Repository](https://repo1.maven.org/maven2/org/codelibs/elasticsearch-minhash/)
+[Versions in Maven Repository](https://repo1.maven.org/maven2/org/codelibs/fesen-minhash/)
 
 ### Issues/Questions
 
-Please file an [issue](https://github.com/codelibs/elasticsearch-minhash/issues "issue").
+Please file an [issue](https://github.com/codelibs/fesen-minhash/issues "issue").
 
 ## Installation
 
-    $ $ES_HOME/bin/elasticsearch-plugin install org.codelibs:elasticsearch-minhash:7.10.1
+    $ $ES_HOME/bin/fesen-plugin install org.codelibs:fesen-minhash:7.14.0
 
 ## Getting Started
 
@@ -52,6 +53,7 @@ Put a minhash field into an index mapping:
         },
         "minhash_value":{
           "type":"minhash",
+          "store":true,
           "minhash_analyzer":"minhash_analyzer"
         }
       }
@@ -71,7 +73,7 @@ Add the following document:
 The minhash value is calculated automatically when adding the document.
 You can check it as below:
 
-    $ curl -XGET "localhost:9200/my_index/_doc/1?pretty&fields=minhash_value,_source" 
+    $ curl -XGET "localhost:9200/my_index/_doc/1?pretty&stored_fields=minhash_value,_source"
 
 The response is:
 
