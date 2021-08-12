@@ -218,6 +218,11 @@ public class MinHashFieldMapper extends ParametrizedFieldMapper {
             return new SortedSetOrdinalsIndexFieldData.Builder(name(),
                     CoreValuesSourceType.BYTES);
         }
+
+        @Override
+        public CollapseType collapseType() {
+            return CollapseType.KEYWORD;
+        }
     }
 
     private final boolean indexed;
