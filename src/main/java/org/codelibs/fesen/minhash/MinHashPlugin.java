@@ -13,7 +13,8 @@ import org.codelibs.fesen.plugins.AnalysisPlugin;
 import org.codelibs.fesen.plugins.MapperPlugin;
 import org.codelibs.fesen.plugins.Plugin;
 
-public class MinHashPlugin extends Plugin implements MapperPlugin, AnalysisPlugin {
+public class MinHashPlugin extends Plugin
+        implements MapperPlugin, AnalysisPlugin {
 
     @Override
     public Map<String, AnalysisProvider<TokenFilterFactory>> getTokenFilters() {
@@ -24,6 +25,8 @@ public class MinHashPlugin extends Plugin implements MapperPlugin, AnalysisPlugi
 
     @Override
     public Map<String, Mapper.TypeParser> getMappers() {
-        return Collections.<String, Mapper.TypeParser> singletonMap(MinHashFieldMapper.CONTENT_TYPE, new MinHashFieldMapper.TypeParser());
+        return Collections.<String, Mapper.TypeParser> singletonMap(
+                MinHashFieldMapper.CONTENT_TYPE,
+                new MinHashFieldMapper.TypeParser());
     }
 }

@@ -103,8 +103,7 @@ public class MinHashFieldMapper extends ParametrizedFieldMapper {
 
         private NamedAnalyzer mergedAnalyzer;
 
-        public Builder(final String name,
-                final ParserContext parserContext) {
+        public Builder(final String name, final ParserContext parserContext) {
             super(name);
             this.parserContext = parserContext;
         }
@@ -206,8 +205,9 @@ public class MinHashFieldMapper extends ParametrizedFieldMapper {
         }
 
         @Override
-        public ValueFetcher valueFetcher(final MapperService mapperService, final SearchLookup searchLookup, final String format) {
-                     return SourceValueFetcher.identity(name(), mapperService, format);
+        public ValueFetcher valueFetcher(final MapperService mapperService,
+                final SearchLookup searchLookup, final String format) {
+            return SourceValueFetcher.identity(name(), mapperService, format);
         }
 
         @Override

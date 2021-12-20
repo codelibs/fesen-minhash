@@ -16,7 +16,9 @@ public class MinHashTokenFilterFactory extends AbstractTokenFilterFactory {
 
     private final HashFunction[] hashFunctions;
 
-    public MinHashTokenFilterFactory(final IndexSettings indexSettings, final Environment environment, final String name, final Settings settings) {
+    public MinHashTokenFilterFactory(final IndexSettings indexSettings,
+            final Environment environment, final String name,
+            final Settings settings) {
         super(indexSettings, name, settings);
 
         hashBit = settings.getAsInt("bit", 1);
@@ -26,7 +28,9 @@ public class MinHashTokenFilterFactory extends AbstractTokenFilterFactory {
         hashFunctions = MinHash.createHashFunctions(seed, numOfHash);
 
         if (logger.isDebugEnabled()) {
-            logger.debug("Index:{} -> {}-bit minhash with {} murmur3({}) functions.", indexSettings.getIndex(), hashBit, numOfHash, seed);
+            logger.debug(
+                    "Index:{} -> {}-bit minhash with {} murmur3({}) functions.",
+                    indexSettings.getIndex(), hashBit, numOfHash, seed);
         }
     }
 
